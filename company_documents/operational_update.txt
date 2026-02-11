@@ -1,0 +1,67 @@
+==============================================================
+       ACME CORPORATION — MONTHLY OPERATIONAL UPDATE
+                     October 2025
+==============================================================
+
+1. ENGINEERING & PRODUCT
+-------------------------
+  • Sprint velocity: 92 story points/sprint (target 95).
+    Slight miss attributed to onboarding of 120 new hires.
+  • ACME DataMesh beta released to 15 design partners; early
+    feedback is positive (NPS 54).
+  • GenStudio v2.1 patch shipped — resolved 14 critical bugs,
+    improved inference latency by 18%.
+  • Tech-debt ratio: 22% of sprint capacity allocated to tech
+    debt (target: stay below 25%).
+
+2. SALES & REVENUE
+--------------------
+  • October bookings: $142 M (plan: $135 M) — 105% of target.
+  • Pipeline for Q4: $620 M (weighted: $310 M).
+  • Win rate: 34% (trailing 6-month average; up from 31% in H1).
+  • Largest deal closed: $18 M multi-year cloud + AI bundle with
+    a European automotive manufacturer.
+
+3. CUSTOMER SUCCESS
+--------------------
+  • Net Revenue Retention (NRR): 118% (target >115%).
+  • Churn: 4.2% annualised gross churn (target <5%).
+  • Support ticket volume: 8,400 (down 6% MoM) thanks to
+    AI-powered self-service deflection.
+  • Escalations: 23 P1 incidents; MTTR 3.2 hours (target <4 hrs).
+
+4. OPERATIONS & INFRASTRUCTURE
+---------------------------------
+  • US-East data centre: utilisation at 89% (down from 91% after
+    workload rebalancing to US-West).
+  • Cloud infrastructure cost: $38 M/month; FinOps team targeting
+    $35 M by Q1 2026 through reserved-instance optimisation.
+  • Uptime SLA: 99.97% (target 99.95%).
+
+5. PEOPLE & TALENT
+-------------------
+  • Headcount: 28,100 (net +300 in October).
+  • Engineering attrition (rolling 12-month): 17.5%
+    – Retention task-force launched compensation adjustment for
+      mid-level engineers (Bands 5-7); effective November 1.
+    – "Tech Fellows" programme announced; 12 nominations received.
+  • Offer-acceptance rate improved to 72% (from 68% in Q3).
+  • AI-literacy training: 45% of employees enrolled.
+
+6. FINANCE SNAPSHOT
+--------------------
+  • October revenue: $438 M (plan: $430 M).
+  • YTD revenue: $3.52 B (75% of FY target $4.8 B — on track).
+  • Cash & equivalents: $1.1 B.
+  • Capex YTD: $320 M (budget: $420 M for full year).
+
+7. KEY ACTION ITEMS
+---------------------
+  #  Action                               Owner    Status
+  1  Data-centre capacity expansion plan   COO      On Track
+  2  Compensation adjustment rollout       CHRO     In Progress
+  3  AI acquisition shortlist              Corp Dev Under Review
+  4  Cybersecurity division charter        CTO      Draft Ready
+  5  FinOps cost-reduction programme       CFO      On Track
+
+==============================================================

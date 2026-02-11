@@ -1,0 +1,64 @@
+==============================================================
+         ACME CORPORATION — ANNUAL REPORT FY 2025
+==============================================================
+
+1. EXECUTIVE SUMMARY
+---------------------
+Fiscal Year 2025 was a year of accelerated growth for ACME Corporation.
+Total revenue reached $4.8 billion, an increase of 14% year-over-year.
+Net income grew to $620 million (up 18%), driven by strong performance
+in our Cloud Services and AI Products divisions.
+
+Key highlights:
+  • Revenue: $4.8 B (+14% YoY)
+  • Net Income: $620 M (+18% YoY)
+  • Operating Margin: 22.4% (up from 20.1%)
+  • Employee Count: 28,500 (up from 24,000)
+  • Customer Base: 12,000+ enterprise clients across 45 countries
+
+2. REVENUE BREAKDOWN BY DIVISION
+----------------------------------
+Division                  Revenue      YoY Growth
+Cloud Services            $1.92 B       +22%
+AI & Data Products        $1.15 B       +31%
+Enterprise Software       $0.96 B        +4%
+Professional Services     $0.48 B        +6%
+Hardware & IoT            $0.29 B        -3%
+
+Cloud Services and AI Products together account for 64% of total
+revenue, up from 55% in FY 2024. Hardware & IoT continues to decline
+as the company shifts to software-centric offerings.
+
+3. GEOGRAPHIC PERFORMANCE
+--------------------------
+Region              Revenue     YoY Growth
+North America       $2.64 B      +12%
+Europe              $1.10 B      +15%
+Asia-Pacific        $0.82 B      +19%
+Rest of World       $0.24 B      +10%
+
+Asia-Pacific showed the strongest growth, propelled by new data-centre
+partnerships in India, Japan, and Australia.
+
+4. KEY RISKS AND CHALLENGES
+-----------------------------
+  • Regulatory Pressure: New AI-governance regulations in the EU and
+    potential US federal legislation may increase compliance costs.
+  • Talent Retention: Attrition in the engineering department rose to
+    17% (from 13% in FY 2024), impacting delivery timelines.
+  • Supply Chain: Semiconductor availability remains a risk for the
+    Hardware & IoT division.
+  • Currency Fluctuations: A stronger US dollar reduced European revenue
+    by approximately $45 M when expressed in USD.
+
+5. OUTLOOK FOR FY 2026
+------------------------
+Management projects revenue of $5.4–5.6 billion for FY 2026
+(12–17% growth). Priority investment areas include:
+  • Expanding the AI Products portfolio with generative-AI solutions.
+  • Opening two new data centres in Southeast Asia.
+  • Launching a dedicated Cybersecurity division in Q2 2026.
+  • Reducing engineering attrition to below 12% through compensation
+    and career-path improvements.
+
+==============================================================

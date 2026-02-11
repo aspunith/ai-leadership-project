@@ -1,0 +1,62 @@
+==============================================================
+       ACME CORPORATION — Q3 FY 2025 QUARTERLY REPORT
+==============================================================
+
+PERIOD: July 1 – September 30, 2025
+
+1. FINANCIAL SUMMARY
+----------------------
+  • Quarterly Revenue: $1.28 B (+16% YoY, +4% QoQ)
+  • Gross Margin: 61.3%
+  • Operating Income: $285 M
+  • Free Cash Flow: $210 M
+
+2. DIVISIONAL HIGHLIGHTS
+--------------------------
+Cloud Services ($510 M, +24% YoY)
+  – Signed 340 new enterprise contracts.
+  – Launched ACME CloudGuard, a zero-trust security add-on.
+
+AI & Data Products ($320 M, +35% YoY)
+  – Released ACME GenStudio v2.0 with multi-modal capabilities.
+  – Secured a $45 M deal with a Fortune-50 healthcare firm.
+
+Enterprise Software ($250 M, +3% YoY)
+  – ERP platform migration to cloud completed for 60% of clients.
+  – Customer satisfaction (CSAT) score improved to 82 (from 78).
+
+Professional Services ($128 M, +5% YoY)
+  – Utilisation rate: 74%.
+  – Launched an AI-advisory practice generating $12 M in Q3.
+
+Hardware & IoT ($72 M, -5% YoY)
+  – Continued decline; management evaluating strategic options
+    including potential divestiture in FY 2026.
+
+3. KEY RISKS IDENTIFIED THIS QUARTER
+---------------------------------------
+  • Engineering Attrition: Hit 18% annualised in Q3 (up from 15% in Q2).
+    Root-cause analysis points to below-market compensation in
+    mid-level roles and limited remote-work flexibility.
+  • Data-Centre Capacity: US-East region operating at 91% utilisation;
+    expansion not online until Q1 FY 2026. Risk of SLA breaches if
+    demand spikes unexpectedly.
+  • Regulatory: EU AI Act enforcement begins Q4 — compliance readiness
+    at 70%. Estimated remaining investment: $8 M.
+  • Client Concentration: Top-10 clients represent 28% of revenue.
+
+4. EMPLOYEE & CULTURE METRICS
+-------------------------------
+  • Headcount: 27,800 (Q2: 27,200)
+  • Offer-acceptance rate: 68% (target 80%)
+  • Diversity: Women in tech roles — 31% (target 35%)
+  • eNPS (Employee Net Promoter Score): 42 (industry avg: 38)
+
+5. OUTLOOK FOR Q4 FY 2025
+---------------------------
+  – Expected revenue: $1.30–1.35 B
+  – Planned product launches: ACME DataMesh (real-time analytics)
+  – Board to finalise Cybersecurity division charter in November.
+  – Engineering retention task-force to present action plan by Oct 31.
+
+==============================================================

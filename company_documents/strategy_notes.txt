@@ -1,0 +1,66 @@
+==============================================================
+       ACME CORPORATION — STRATEGIC PLANNING NOTES
+              (Leadership Off-site, August 2025)
+==============================================================
+
+ATTENDEES: CEO, CFO, CTO, COO, CHRO, Division Heads
+
+─────────────────────────────────────────────────────
+THEME 1 — DOUBLE DOWN ON AI
+─────────────────────────────────────────────────────
+  • GenAI is the largest growth lever. Invest additional $150 M
+    in FY 2026 R&D budget for AI Products division.
+  • Acquire or partner with two AI-native startups (target:
+    NLP/LLM tooling and computer-vision verticals).
+  • Internal AI adoption: deploy co-pilot tools for Engineering,
+    Sales, and Customer Support by Q2 2026.
+
+─────────────────────────────────────────────────────
+THEME 2 — GEOGRAPHIC EXPANSION
+─────────────────────────────────────────────────────
+  • Open Singapore data centre (H1 2026) and Mumbai data centre
+    (H2 2026) to serve APAC growth.
+  • Establish regional HQs in Singapore and Dubai.
+  • Localise products for Japanese and Korean markets.
+
+─────────────────────────────────────────────────────
+THEME 3 — PORTFOLIO RATIONALISATION
+─────────────────────────────────────────────────────
+  • Hardware & IoT: Explore divestiture or spin-off; division is
+    margin-dilutive (-1.2% operating margin) and non-strategic.
+  • Enterprise Software: Accelerate cloud migration; sunset
+    on-premise licensing by end of FY 2027.
+  • Professional Services: Grow AI-advisory sub-practice to $80 M
+    run-rate by end of FY 2026.
+
+─────────────────────────────────────────────────────
+THEME 4 — TALENT & CULTURE
+─────────────────────────────────────────────────────
+  • Address engineering attrition (currently 17-18%):
+      – Benchmark compensation to 75th percentile of market.
+      – Expand remote-work policy to 3 days/week.
+      – Launch "Tech Fellows" programme for senior ICs.
+  • Increase women in tech roles from 31% → 36% by FY 2027.
+  • Establish AI-literacy training for all employees (target:
+    80% completion by Q4 2026).
+
+─────────────────────────────────────────────────────
+THEME 5 — CYBERSECURITY AS A NEW PILLAR
+─────────────────────────────────────────────────────
+  • Stand up a dedicated Cybersecurity division in Q2 2026.
+  • Seed investment: $50 M + potential tuck-in acquisition.
+  • Target: $200 M revenue run-rate within 3 years.
+  • Leverage existing CloudGuard product as anchor offering.
+
+─────────────────────────────────────────────────────
+ACTION ITEMS & OWNERS
+─────────────────────────────────────────────────────
+#  Action                                    Owner       Due
+1  Finalise AI R&D budget increase           CFO/CTO     Sep 30
+2  Identify acquisition targets              Corp Dev    Oct 15
+3  Singapore DC site selection               COO         Oct 31
+4  Compensation benchmarking study           CHRO        Sep 15
+5  Hardware & IoT strategic-options paper     CFO/COO     Nov 15
+6  Cybersecurity division charter            CTO         Nov 30
+
+==============================================================
