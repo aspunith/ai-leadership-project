@@ -44,15 +44,18 @@ def generate_answer(query: str, documents: List[Document]) -> str:
     """
     Generate an answer to *query* grounded in *documents*.
 
-    Uses OpenAI, Gemini, or falls back to raw passages.
+    Priority: OpenAI → Gemini → raw-passage fallback.
     """
     context = _format_context(documents)
 
     if config.USE_OPENAI:
+        print("[generator] Using OpenAI GPT-4o")
         return _openai_answer(query, context)
     elif config.USE_GEMINI:
+        print("[generator] Using Google Gemini (gemini-2.0-flash)")
         return _gemini_answer(query, context)
     else:
+        print("[generator] No LLM configured — using fallback (raw passages)")
         return _fallback_answer(query, context)
 
 
