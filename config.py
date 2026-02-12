@@ -15,13 +15,19 @@ CHROMA_PERSIST_DIR = PROJECT_ROOT / "vector_store"
 
 # ── LLM / Embedding settings ────────────────────────────────────────────
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+
 USE_OPENAI = bool(OPENAI_API_KEY and not OPENAI_API_KEY.startswith("sk-..."))
+USE_GEMINI = bool(GOOGLE_API_KEY) and not USE_OPENAI
 
 # OpenAI models (used when USE_OPENAI is True)
 OPENAI_CHAT_MODEL = "gpt-4o"
 OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
 
-# Local / free-tier model (used when USE_OPENAI is False)
+# Google Gemini models (used when USE_GEMINI is True)
+GEMINI_CHAT_MODEL = "gemini-2.0-flash"
+
+# Local / free-tier model (used when no API key is provided)
 LOCAL_EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
 # ── Retrieval settings ───────────────────────────────────────────────────
