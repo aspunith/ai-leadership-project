@@ -174,7 +174,7 @@ Covers five areas:
 
 ### Prerequisites
 - Python 3.10+
-- (Optional) A **Google Gemini API key** (free tier at [aistudio.google.dev]([https://aistudio.google.dev](https://aistudio.google.com/))) or an **OpenAI API key**
+- (Optional) A **Google Gemini API key** (free tier at [Google AI Studio]([https://aistudio.google.dev](https://aistudio.google.com/))) or an **OpenAI API key**
 
 ### Steps
 
