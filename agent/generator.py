@@ -44,13 +44,14 @@ def generate_answer(query: str, documents: List[Document]) -> str:
     """
     Generate an answer to *query* grounded in *documents*.
 
-    Uses OpenAI ChatCompletion when available; otherwise returns a
-    formatted summary of the retrieved passages.
+    Uses OpenAI, Gemini, or falls back to raw passages.
     """
     context = _format_context(documents)
 
     if config.USE_OPENAI:
         return _openai_answer(query, context)
+    elif config.USE_GEMINI:
+        return _gemini_answer(query, context)
     else:
         return _fallback_answer(query, context)
 
@@ -80,11 +81,36 @@ def _openai_answer(query: str, context: str) -> str:
     return response.content
 
 
+def _gemini_answer(query: str, context: str) -> str:
+    """Call Google Gemini to synthesise an answer."""
+    from langchain_google_genai import ChatGoogleGenerativeAI
+    from langchain_core.messages import SystemMessage, HumanMessage
+
+    llm = ChatGoogleGenerativeAI(
+        model=config.GEMINI_CHAT_MODEL,
+        temperature=config.TEMPERATURE,
+        max_output_tokens=config.MAX_ANSWER_TOKENS,
+        google_api_key=config.GOOGLE_API_KEY,
+    )
+
+    messages = [
+        SystemMessage(content=SYSTEM_PROMPT),
+        HumanMessage(content=(
+            f"Context:\n{context}\n\n"
+            f"Question: {query}\n\n"
+            "Provide a clear, concise answer for leadership."
+        )),
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
+
+
 def _fallback_answer(query: str, context: str) -> str:
     """Return retrieved passages when no LLM is configured."""
     separator = "=" * 60
     header = (
-        "[No OpenAI key configured — showing retrieved passages]\n"
+        "[No API key configured — showing retrieved passages]\n"
         f"Question: {query}\n"
         f"{separator}\n"
     )
