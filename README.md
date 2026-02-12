@@ -36,9 +36,9 @@ The agent implements a full **RAG pipeline** with three stages:
 |-------|--------|-------------|
 | **Ingest** | `agent/ingest.py` | Loads `.txt`, `.pdf`, `.docx` files → splits into overlapping chunks → embeds with sentence-transformers or OpenAI → persists to ChromaDB |
 | **Retrieve** | `agent/retriever.py` | Converts the user's question into a vector → performs cosine similarity search → returns the top-K most relevant chunks |
-| **Generate** | `agent/generator.py` | Feeds retrieved context + question to Gemini / GPT-4o (or falls back to showing raw passages if no API key) |
+| **Generate** | `agent/generator.py` | Feeds retrieved context + question to Gemini / GPT-4o (or falls back to showing raw passages if no LLM is configured) |
 
-**Tri-mode design:** Works fully offline with local `all-MiniLM-L6-v2` embeddings and a fallback answer mode, or upgrades to **Google Gemini 2.0 Flash** or **OpenAI GPT-4o** for polished, synthesised answers when an API key is provided. Priority: OpenAI → Gemini → Fallback.
+**Tri-mode design:** Works fully offline with local `all-MiniLM-L6-v2` embeddings and raw-passage fallback. Also supports **Google Gemini 2.0 Flash** or **OpenAI GPT-4o** when API keys are provided. Priority: OpenAI → Gemini → Fallback.
 
 ---
 
@@ -88,7 +88,7 @@ The agent implements a full **RAG pipeline** with three stages:
               ┌──────────────────────────────┐
      GENERATE │  System Prompt + Context     │
               │  + Question → LLM Answer     │
-              │  (Gemini / GPT-4o / fallback)│
+              |  (Gemini / GPT-4o / fallback)  |
               └──────────────┬───────────────┘
                              │
                              ▼
@@ -111,7 +111,7 @@ ai-leadership-agent/
 │   ├── __init__.py
 │   ├── ingest.py            # Stage 1: Document loading, chunking, embedding
 │   ├── retriever.py         # Stage 2: Vector similarity search
-│   └── generator.py         # Stage 3: Answer synthesis (Gemini / GPT-4o / fallback)
+    └── generator.py         # Stage 3: Answer synthesis (Gemini / GPT-4o / fallback)
 │
 ├── company_documents/       # Source documents (add your own here)
 │   ├── annual_report_2025.txt
@@ -149,7 +149,7 @@ All tuneable settings in one place. Reads `OPENAI_API_KEY` and `GOOGLE_API_KEY` 
 
 ### `agent/generator.py` — Answer Generation
 - **`SYSTEM_PROMPT`** — Instructs the LLM to act as a leadership insight agent, answer only from context, cite data, and avoid hallucination.
-- **`generate_answer()`** — Routes to OpenAI, Gemini, or the fallback mode based on available API keys.
+- **`generate_answer()`** — Routes to OpenAI, Gemini, or the fallback mode based on available configuration.
 - **`_openai_answer()`** — Sends system prompt + retrieved context + question to GPT-4o via LangChain's `ChatOpenAI`.
 - **`_gemini_answer()`** — Sends system prompt + retrieved context + question to Gemini 2.0 Flash via LangChain's `ChatGoogleGenerativeAI`.
 - **`_fallback_answer()`** — Returns the retrieved passages directly when no LLM is configured.
@@ -174,7 +174,7 @@ Covers five areas:
 
 ### Prerequisites
 - Python 3.10+
-- (Optional) A **Google Gemini API key** (free tier at [aistudio.google.dev](https://aistudio.google.dev)) or an **OpenAI API key** for LLM-synthesised answers
+- (Optional) A **Google Gemini API key** (free tier at [aistudio.google.dev](https://aistudio.google.dev)) or an **OpenAI API key**
 
 ### Steps
 
@@ -191,12 +191,15 @@ python -m venv .venv
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Configure an LLM API key (at least one recommended)
+# 4. Configure your LLM backend (choose one)
 copy .env.example .env          # Windows
 # cp .env.example .env          # macOS / Linux
-# Then edit .env and add your key(s):
-#   GOOGLE_API_KEY=AIza...       ← Gemini (recommended, free tier available)
-#   OPENAI_API_KEY=sk-...        ← OpenAI (optional, paid)
+
+# Option A: Google Gemini (free tier, recommended)
+#   Set in .env:   GOOGLE_API_KEY=AIza...
+
+# Option B: OpenAI (paid)
+#   Set in .env:   OPENAI_API_KEY=sk-...
 
 # 5. Ingest the sample company documents
 python main.py --ingest
@@ -205,12 +208,12 @@ python main.py --ingest
 python main.py --query "What is our current revenue trend?"
 ```
 
-> **No API key at all?** The agent still works — it uses a local `all-MiniLM-L6-v2`
-> model for embeddings and returns the top retrieved passages instead of an
-> LLM-generated summary.
+> **No API key?** The agent still works — it uses a local `all-MiniLM-L6-v2`
+> model for embeddings and returns the top retrieved passages as-is (no LLM
+> synthesis).
 >
-> **Gemini vs OpenAI:** If both keys are set, OpenAI takes priority. To use Gemini
-> instead, remove or comment out the `OPENAI_API_KEY` line in `.env`.
+> **Priority order:** If both keys are configured, the agent picks:
+> OpenAI → Gemini → raw-passage fallback.
 
 ---
 
@@ -289,7 +292,7 @@ All settings are in `config.py`:
 | Decision | Rationale |
 |----------|-----------|
 | **ChromaDB for vector storage** | Lightweight, embedded, no external server needed — ideal for a self-contained assessment project |
-| **Tri-mode LLM support (OpenAI / Gemini / local)** | Supports Google Gemini (free tier), OpenAI GPT-4o (paid), and a no-API fallback — maximises accessibility and demonstrates multi-provider LLM integration |
+| **Tri-mode LLM support (OpenAI / Gemini / local)** | Supports OpenAI GPT-4o (paid), Google Gemini (free tier), and a no-LLM fallback — maximises accessibility and demonstrates multi-provider LLM integration |
 | **LangChain orchestration** | Industry-standard framework; modular abstractions make each component independently swappable |
 | **Overlapping chunks (200-char overlap)** | Prevents information loss at chunk boundaries — critical for accurate retrieval |
 | **Clear old store on re-ingest** | Prevents duplicate passages from accumulating across multiple ingest runs |
